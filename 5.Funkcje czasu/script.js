@@ -13,6 +13,7 @@ async function HelloCounter()
 
 HelloCounter();
 
+//Zadanie 2
 var array = ['item1', 'item2', 'item3', 'item4', 'item5'];
 
 const arr = [1, 2, 3, 4, 5];
