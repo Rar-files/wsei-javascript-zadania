@@ -123,33 +123,74 @@ invertedTab(tab);
 console.log();
 
 
+//Zadanie 4
+let tab4 = [4,3,7,9,3,4];
 
+function sumTabElements(tab){
+    bufor =0;
+    tab.forEach(number => {bufor += number});
+    return bufor;
+}
+
+console.log(sumTabElements(tab4));
+
+
+//Zadanie 5
+let tab5 = [4,3,5,2,3,4];
+
+function func5(tab){
+    avg = tab.reduce((a, b) => a + b , 0) / tab.length;
+    tab.forEach(number => {console.log(number*avg)});
+}
+
+func5(tab5);
+
+
+//Zadanie 6
 function func6(array) {
 
-    var newArray = array.filter(a=> a % 2 === 0);
-    var result = newArray.reduce((a, b) => a + b , 0) / newArray.length;
+    var arr = array.filter(a=> a % 2 == 0);
+    var result = arr.reduce((a, b) => a + b , 0) / arr.length;
 
     console.log(result);
 }
 
 func6([1,2,3,4,5,6,7,8,9,10])
 
-let arr = [5, 3, 1, 55, 33, 11];
 
-function sortowanie(arr) {
-    let newArray = arr.sort((a, b) => a- b);
-    console.log(newArray);
+//Zadanie 7
+function sortTab(arr) {
+    console.log(arr.sort((a, b) => a- b));
 }
 
-sortowanie(arr);
+sortTab([5, 3, 1, 55, 33, 11]);
 
-let arr = [5, 3, 1, 55, 33, 11];
 
-function delateValue(id, delateValue)
-{
+//Zadanie 8
+function func8(arr1, arr2) {
+    for(i=0; i<arr1.length; i++)
+        arr1[i] = arr1[i] + arr2[i];
+    return arr1;
+}
+
+console.log(func8([5, 3, 1, 55, 33, 11], [4,3,7,9,3,4]));
+
+
+//Zadanie 9
+function func9(arr, delateValue){
     let newArr = [];
-    id.forEach(a => {if(a!=delateValue) newArr.push(a)})
+    arr.forEach(a => {if(a!=delateValue) newArr.push(a)})
     return newArr;
 }
 
-console.log(delateValue(arr, 33));
+console.log(func9([5, 33, 1, 6, 33, 2], 33));
+
+
+//Zadanie 10
+function func10(arr){
+    for(i = 0; i<arr.length; i++)
+        arr[i] = arr[i]*-1
+    return arr;
+}
+
+console.log(func10([5, 33, 1, 6, 33, 2]));
