@@ -101,3 +101,20 @@ Calc2.clearMemory();
 Calc2.printMemory();
 
 //Zadanie 3
+function Game(){
+    this.number = 0;
+    this.randomNumber = function(){
+        this.number = Math.floor(Math.random() * 10) + 1;
+        this.rnd();
+    }
+    this.rnd = function(){
+        if(this.number>5){
+            clearInterval(time);
+            console.log("Program sie zakończył");
+        }
+    }
+    
+}
+
+let game1 = new Game();
+var time= setInterval(()=>game1.randomNumber(),1000);
